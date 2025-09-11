@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import ErrorBoundary from './src/components/ErrorBoundary';
 import LoginScreen from './src/screens/LoginScreen';
 import HomeScreen from './src/screens/HomeScreen';
 import StudySetupScreen from './src/screens/StudySetupScreen';
@@ -9,6 +10,7 @@ import BreakScreen from './src/screens/BreakScreen';
 import MemoryGameScreen from './src/screens/MemoryGameScreen';
 import MathPuzzleScreen from './src/screens/MathPuzzleScreen';
 import ColorMatchScreen from './src/screens/ColorMatchScreen';
+import AnalyticsScreen from './src/screens/AnalyticsScreen';
 import { initDatabase } from './src/utils/database';
 
 const Stack = createStackNavigator();
@@ -18,7 +20,8 @@ export default function App() {
     initDatabase();
   }, []);
   return (
-    <NavigationContainer>
+    <ErrorBoundary>
+      <NavigationContainer>
       <Stack.Navigator initialRouteName="Login">
         <Stack.Screen 
           name="Login" 
@@ -60,7 +63,13 @@ export default function App() {
           component={ColorMatchScreen} 
           options={{ headerShown: false }}
         />
+        <Stack.Screen 
+          name="Analytics" 
+          component={AnalyticsScreen} 
+          options={{ headerShown: false }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
+    </ErrorBoundary>
   );
 }

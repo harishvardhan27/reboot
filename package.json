@@ -27,7 +27,8 @@
     "expo-file-system": "~15.4.4",
     "expo-asset": "~8.10.1",
     "expo-sqlite": "~11.3.3",
-    "react-native-gesture-handler": "~2.12.0"
+    "react-native-gesture-handler": "~2.12.0",
+    "expo-app-state": "~2.4.0"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0"
