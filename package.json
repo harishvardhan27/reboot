@@ -5,7 +5,9 @@
   "scripts": {
     "start": "expo start",
     "android": "expo start --android",
-    "ios": "expo start --ios"
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "build:web": "expo build:web"
   },
   "dependencies": {
     "expo": "~49.0.0",
@@ -20,7 +22,6 @@
     "expo-constants": "~14.4.2",
     "expo-camera": "~13.4.4",
     "expo-permissions": "~14.2.1",
-    "expo-camera": "~13.4.4",
     "expo-notifications": "~0.20.1",
     "expo-haptics": "~12.4.0",
     "expo-face-detector": "~12.0.0",
@@ -28,9 +29,11 @@
     "expo-asset": "~8.10.1",
     "expo-sqlite": "~11.3.3",
     "react-native-gesture-handler": "~2.12.0",
-    "expo-app-state": "~2.4.0"
+    "react-native-web": "~0.19.6",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.0"
+    "@babel/core": "^7.20.0",
+    "@expo/webpack-config": "^19.0.0"
   }
 }
